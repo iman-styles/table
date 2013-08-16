@@ -1,0 +1,60 @@
+.table {
+  border: 1px solid #ccc;
+  th {
+    background: #ddd;
+    font-weight: bold;
+    padding: 8px 10px;
+  }
+  thead {
+    border: 1px solid #ccc;
+  }
+  tbody {
+    border: 1px solid #ccc;
+  }
+  thead + tbody {
+    border-top-width: 0px;
+  }
+  td {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 10px;
+  }
+  td.strong {
+    background: #eee;
+    border-left: 1px solid #ccc;
+    position: relative;
+    &:after,
+    &:before {
+      @include triangle('left', 5px, 10px, #eee);
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      left: -5px;
+      z-index: 2;
+    }
+    &:before {
+      @include triangle('left', 7px, 12px, #ccc);
+      z-index: 1;
+      margin-top: -6px;
+      left: -7px;
+    }
+  }
+}
+
+.table--extras {
+  border: 0;
+  thead {
+    border-color: $purple-light;
+    border-bottom: 0;
+  }
+  th {
+    background: $purple-light;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+  }
+  th.strong {
+    background: darken($purple-light, 10%);
+  }
+}
