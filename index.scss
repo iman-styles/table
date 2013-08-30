@@ -21,6 +21,7 @@
   td.strong {
     background: #eee;
     border: 1px solid #ccc;
+    border-top: none;
   }
   td.strong .parent {
     &:after,
