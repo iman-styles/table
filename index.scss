@@ -20,8 +20,9 @@
   }
   td.strong {
     background: #eee;
-    border-left: 1px solid #ccc;
-    position: relative;
+    border: 1px solid #ccc;
+  }
+  td.strong .parent {
     &:after,
     &:before {
       @include triangle('left', 5px, 10px, #eee);
@@ -30,14 +31,14 @@
       position: absolute;
       top: 50%;
       margin-top: -5px;
-      left: -5px;
+      left: -15px;
       z-index: 2;
     }
     &:before {
       @include triangle('left', 7px, 12px, #ccc);
       z-index: 1;
       margin-top: -6px;
-      left: -7px;
+      left: -17px;
     }
   }
 }
