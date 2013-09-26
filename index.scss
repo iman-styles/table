@@ -60,3 +60,12 @@
     background: darken($purple-light, 10%);
   }
 }
+
+.table--artificial-aids tr {
+  height: 122px;
+}
+
+.table--artificial-aids .parent {
+  font-size: 13px;
+  line-height: 18px;
+}
